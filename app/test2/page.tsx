@@ -5,7 +5,9 @@ import {
   Parallax,
   ParallaxBanner,
   ParallaxProvider,
+  useParallax,
 } from 'react-scroll-parallax';
+import ContentBox from '../components/parralax/contentBox/ContentBox';
 
 export default function Test2() {
   return (
@@ -15,44 +17,66 @@ export default function Test2() {
           layers={[{ image: 'headline.jpeg', speed: -15 }]}
           className="h-full"
         >
-          <div>test</div>
-        </ParallaxBanner>
+          <div className="absolute inset-0 flex items-center md:justify-center flex-col p-4">
+            <img
+              src="https://le-cdn.websites.hibu.com/f10e5acbebbf4a19bbd1390a71eb08fc/dms3rep/multi/opt/logo-85e86620-1920w.png"
+              alt="logo"
+              className="w-1/2 md:w-1/4 mt-4 animate-opacity-to-one-800 opacity-0 shadow-2xl shadow-red-400 rounded-full"
+            />
 
-        <div>test</div>
-        <div>test</div>
-        <div>test</div>
-        <div>test</div>
-        <div>test</div>
-        <div>test</div>
-        <div>test</div>
-        <div>test</div>
-        <div>test</div>
-        <div>test</div>
-        <div>test</div>
-        <div>test</div>
-        <div>test</div>
-        <div>test</div>
-        <div>test</div>
-        <div>test</div>
-        <div>test</div>
-        <div>test</div>
-        <div>test</div>
-        <div>test</div>
-        <div>test</div>
-        <div>test</div>
-        <div>test</div>
-        <div>test</div>
-        <div>test</div>
-        <div>test</div>
-        <div>test</div>
-        <div>test</div>
-        <div>test</div>
-        <div>test</div>
-        <div>test</div>
-        <div>test</div>
-        <div>test</div>
-        <div>test</div>
-        <div>test</div>
+            <h1 className="text-4xl md:text-8xl text-white text-center">
+              Access Laser Center
+            </h1>
+            <div className="flex flex-col md:flex-row flex-1 w-full p-8 gap-3">
+              <ContentBox
+                className="flex-1  bg-slate-500 bg-opacity-80 rounded-xl p-2"
+                translateX={['25px', '-100px']}
+              >
+                f
+              </ContentBox>
+              <ContentBox
+                className="flex-1 md:flex-[2_2_0%] bg-slate-500 bg-opacity-80 rounded-xl p-2"
+                translateX={['0px', '100px']}
+              >
+                f
+              </ContentBox>
+            </div>
+          </div>
+        </ParallaxBanner>
+        <div className="flex flex-row h-12 overflow-hidden">
+          <Parallax translateX={[-100, 100]}>
+            <div className="flex flex-row h-12 gap-3">
+              <div className="btn btn-primary">Book Today!</div>
+              <div className="btn btn-primary">Free Consult!</div>
+              <div className="btn btn-primary">Contact Us!</div>
+            </div>
+          </Parallax>
+        </div>
+        <ParallaxBanner
+          layers={[{ image: 'second.jpeg', speed: -15 }]}
+          className="h-full flex flex-col p-4"
+        >
+          <div className="flex-1"></div>
+          <ContentBox
+            className="flex-1  bg-slate-500 bg-opacity-80 rounded-xl p-2"
+            translateX={['50px', '-50px']}
+          >
+            f
+          </ContentBox>
+        </ParallaxBanner>
+        <div className="flex flex-row h-12 overflow-hidden">
+          <Parallax translateX={[100, -50]}>
+            <div className="flex flex-row h-12 gap-3">
+              <div className="btn btn-primary">Book Today!</div>
+              <div className="btn">Free Consult!</div>
+              <div className="btn">Contact Us!</div>
+            </div>
+          </Parallax>
+        </div>
+        <ParallaxBanner
+          layers={[{ image: 'hairRemoval.jpeg', speed: -15 }]}
+          className="h-full"
+        ></ParallaxBanner>
       </ParallaxProvider>
     </div>
   );
