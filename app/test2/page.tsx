@@ -8,6 +8,13 @@ import {
   useParallax,
 } from 'react-scroll-parallax';
 import ContentBox from '../components/parralax/contentBox/ContentBox';
+import { Proza_Libre } from 'next/font/google';
+
+const pozra = Proza_Libre({
+  weight: '400',
+  style: 'italic',
+  subsets: ['latin'],
+});
 
 export default function Test2() {
   return (
@@ -24,21 +31,81 @@ export default function Test2() {
               className="w-1/2 md:w-1/4 mt-4 animate-opacity-to-one-800 opacity-0 shadow-2xl shadow-red-400 rounded-full"
             />
 
-            <h1 className="text-4xl md:text-8xl text-white text-center">
+            <h1
+              className={`${pozra.className} text-4xl md:text-8xl text-white text-center`}
+            >
               Access Laser Center
             </h1>
             <div className="flex flex-col md:flex-row flex-1 w-full p-8 gap-3">
               <ContentBox
-                className="flex-1  bg-slate-500 bg-opacity-80 rounded-xl p-2"
+                className="flex-1 p-2"
                 translateX={['25px', '-100px']}
               >
-                f
+                <div className="card w-auto md:h-auto md:w-auto bg-base-100 shadow-xl image-full">
+                  <figure>
+                    <img src="/cardBackGround.jpeg" alt="Shoes" />
+                  </figure>
+                  <div className="card-body">
+                    <h2 className="card-title">
+                      Chattanoogas Permiere Laser Services
+                    </h2>
+                    <p className="">
+                      Tattoo, Hair, Fungus, Acne, Melanoma, Sun Spots
+                    </p>
+                    <div className="card-actions justify-end">
+                      <button className="btn btn-primary">Book Now!</button>
+                    </div>
+                  </div>
+                </div>
               </ContentBox>
               <ContentBox
-                className="flex-1 md:flex-[2_2_0%] bg-slate-500 bg-opacity-80 rounded-xl p-2"
+                className="flex flex-1 md:flex-[2_2_0%] h-auto md:h-96"
                 translateX={['0px', '100px']}
               >
-                f
+                <div className="carousel p-4 space-x-4 rounded-box">
+                  <div className="carousel-item">
+                    <img
+                      src="/cardBackGround.jpeg"
+                      className="rounded-box h-44 md:h-auto"
+                    />
+                  </div>
+                  <div className="carousel-item">
+                    <img
+                      src="/cardBackGround.jpeg"
+                      className="rounded-box h-44 md:h-auto"
+                    />
+                  </div>
+                  <div className="carousel-item ">
+                    <img
+                      src="/cardBackGround.jpeg"
+                      className="rounded-box h-44 md:h-auto"
+                    />
+                  </div>
+                  <div className="carousel-item ">
+                    <img
+                      src="/cardBackGround.jpeg"
+                      className="rounded-box h-44 md:h-auto"
+                    />
+                  </div>
+                  <div className="carousel-item">
+                    <img
+                      src="/cardBackGround.jpeg"
+                      className="rounded-box h-44 md:h-auto"
+                    />
+                  </div>
+                  <div className="carousel-item">
+                    <img
+                      src="/cardBackGround.jpeg"
+                      className="rounded-box h-44 md:h-auto"
+                    />
+                  </div>
+                  <div className="carousel-item">
+                    <img
+                      src="/cardBackGround.jpeg"
+                      className="rounded-box h-44 md:h-auto"
+                    />
+                  </div>
+                </div>
               </ContentBox>
             </div>
           </div>
@@ -58,7 +125,7 @@ export default function Test2() {
         >
           <div className="flex-1"></div>
           <ContentBox
-            className="flex-1  bg-slate-500 bg-opacity-80 rounded-xl p-2"
+            className="flex-1  bg-slate-500 bg-opacity-80 rounded-xl p-2 shadow-2xl"
             translateX={['50px', '-50px']}
           >
             f

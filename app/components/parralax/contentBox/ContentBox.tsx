@@ -12,7 +12,6 @@ export default function ContentBox({
 }) {
   const { ref } = useParallax({
     translateX: translateX,
-    opacity: [0.5, 1],
     rootMargin: { top: 25, bottom: 25, right: 25, left: 25 },
   });
 
