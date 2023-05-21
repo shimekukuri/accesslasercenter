@@ -111,7 +111,7 @@ export default function Test2() {
           </div>
         </ParallaxBanner>
         <div className="flex flex-row h-12 overflow-hidden">
-          <Parallax translateX={[-100, 100]}>
+          <Parallax translateX={['-50', '100']}>
             <div className="flex flex-row h-12 gap-3">
               <div className="btn btn-primary">Book Today!</div>
               <div className="btn btn-primary">Free Consult!</div>
@@ -125,10 +125,14 @@ export default function Test2() {
         >
           <div className="flex-1"></div>
           <ContentBox
-            className="flex-1  bg-slate-500 bg-opacity-80 rounded-xl p-2 shadow-2xl"
+            className="flex-1 flex  p-2 "
             translateX={['50px', '-50px']}
           >
-            f
+            <article className="prose prose-xl p-6 md:p-8 bg-slate-500 bg-opacity-80 rounded-xl">
+              <h1 className="">Tattoo removal</h1>
+              <p>We provide an assortment of services</p>
+            </article>
+            <div className="hidden md:block">test</div>
           </ContentBox>
         </ParallaxBanner>
         <div className="flex flex-row h-12 overflow-hidden">
@@ -142,8 +146,39 @@ export default function Test2() {
         </div>
         <ParallaxBanner
           layers={[{ image: 'hairRemoval.jpeg', speed: -15 }]}
-          className="h-full"
-        ></ParallaxBanner>
+          className="h-full flex flex-col p-4"
+        >
+          <div className="flex-1"></div>
+          <ContentBox className="flex-1 flex  p-2" translateX={['0px', '50px']}>
+            <article className="prose prose-xl p-6 md:p-8 bg-slate-500 bg-opacity-80 rounded-xl">
+              <h1 className="">Hair removal</h1>
+              <p>We provide an assortment of services</p>
+            </article>
+            <div className="hidden md:block">test</div>
+          </ContentBox>
+        </ParallaxBanner>
+        <div className="flex flex-row h-12 overflow-hidden">
+          <Parallax translateX={[-100, 100]}>
+            <div className="flex flex-row h-12 gap-3">
+              <div className="btn btn-primary">Book Today!</div>
+              <div className="btn btn-primary">Free Consult!</div>
+              <div className="btn btn-primary">Contact Us!</div>
+            </div>
+          </Parallax>
+        </div>
+        <ParallaxBanner
+          layers={[{ image: 'washingFace.jpeg', speed: -15 }]}
+          className="h-full flex flex-col p-4"
+        >
+          <div className="flex-1"></div>
+          <ContentBox className="flex-1 flex p-2" translateX={['0px', '50px']}>
+            <article className="prose prose-xl p-6 md:p-8 bg-slate-500 bg-opacity-80 rounded-xl">
+              <h1 className="">Acne Treament</h1>
+              <p>We provide an assortment of services</p>
+            </article>
+            <div className="hidden md:block">test</div>
+          </ContentBox>
+        </ParallaxBanner>
       </ParallaxProvider>
     </div>
   );
