@@ -37,17 +37,14 @@ export default function Test2() {
               Access Laser Center
             </h1>
             <div className="flex flex-col md:flex-row flex-1 w-full p-8 gap-3">
-              <ContentBox
-                className="flex-1 p-2"
-                translateX={['25px', '-100px']}
-              >
+              <ContentBox className="flex-1 p-2" translateX={['0px', '-100px']}>
                 <div className="card w-auto md:h-auto md:w-auto bg-base-100 shadow-xl image-full">
                   <figure>
                     <img src="/cardBackGround.jpeg" alt="Shoes" />
                   </figure>
                   <div className="card-body">
                     <h2 className="card-title">
-                      Chattanoogas Permiere Laser Services
+                      Chattanoogas Premiere Laser Services
                     </h2>
                     <p className="">
                       Tattoo, Hair, Fungus, Acne, Melanoma, Sun Spots
